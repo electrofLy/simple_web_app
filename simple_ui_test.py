@@ -4,6 +4,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class UITest(unittest.TestCase):
+
     def setUp(self):
         self.driver = webdriver.Remote(command_executor='http://172.18.0.35:4444/wd/hub',
                                        desired_capabilities=DesiredCapabilities.FIREFOX)
