@@ -40,4 +40,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Run web app
-CMD ["python","simple_web_app.py"]
+CMD ["python","./src/simple_web_app.py"]
