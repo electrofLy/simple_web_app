@@ -1,13 +1,15 @@
-web:
-  build: .
-  container_name: simple
-  dockerfile: Dockerfile
-  ports:
-    - "8080:8080"
-  links:
-    - selenium
-selenium:
-  image: selenium/standalone-firefox
-  shm_size: 2g
-  ports:
-    - "4444:4444"
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: simple
+    ports:
+      - "8080:8080"
+    links:
+      - selenium
+  selenium:
+    image: selenium/standalone-firefox
+    shm_size: 2g
+    ports:
+      - "4444:4444"
